@@ -16,8 +16,13 @@ import { ToastContainer } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 
+
+
+export const serverUrl="http://localhost:4000"
+console.log("hello ")
 const App = () => {
   return (
+
     <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
       <ToastContainer />
       <Navbar />
