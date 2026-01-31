@@ -8,11 +8,13 @@ import { serverUrl } from '../App';
 function useGetCurrentUser() {
     const dispatch=useDispatch();
   useEffect(()=>{
-  const fetchUser=async () => {
+  const fetchUser=async () => { 
+    
     try {
-           const result=await axios.get(`${serverUrl}/api/user`,{withCredentials:true})
-            console.log(result)
-            dispatch(setUserData(result.data))
+      const token=localStorage.getItem("token")
+           const {data}=await axios.get("http://localhost:4000/api/user/current",{ headers: { token } })
+            console.log(data.user)
+            dispatch(setUserData(data.user))
   
     } catch (error) {
         console.log(error)
