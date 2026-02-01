@@ -17,6 +17,7 @@ import { ToastContainer } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch } from 'react-redux';
+import Footer from './components/Footer';
 
 
 
@@ -44,6 +45,7 @@ const App = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/profile" element={<Profile />} />  {/* 👈 */}
       </Routes>
+      <Footer/>
 
     </div>
   );
